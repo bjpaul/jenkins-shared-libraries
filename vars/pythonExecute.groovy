@@ -15,7 +15,7 @@ def call(Map param){
       stage("Init"){
         steps{
           script{
-            def fileContent = libraryResource('factorial.py')
+            def fileContent = libraryResource(param.function)
             writeFile file: 'main.py', text: fileContent
             sh "python main.py ${params.number}"
           }
