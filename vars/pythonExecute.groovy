@@ -11,8 +11,8 @@ def call(Map param){
     stages{
       stage("Init"){
         steps{
-          sh 'ls -al "$WORKSPACE"'
-          sh 'python "$WORKSPACE/jenkins-ci/resources/factorial.py"'
+          def pythonScriptPath = libraryResource 'factorial.py'
+          sh 'python "$pythonScriptPath"'
         }
       }
     }
