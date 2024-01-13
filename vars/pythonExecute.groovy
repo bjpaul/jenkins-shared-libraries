@@ -4,8 +4,7 @@ def call(Map param){
       HOME = "${env.WORKSPACE}"
     }
     parameters{
-      int(name: 'number', defaultValue: 5, description: 'Enter the number to calculate the factorial')
-      
+      string(name: 'number', defaultValue: 5, description: 'Enter the number to calculate the factorial')
     }
     agent{
       docker{
