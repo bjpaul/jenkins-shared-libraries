@@ -12,9 +12,9 @@ def call(Map param){
       stage("Init"){
         steps{
           script{
-            def pythonScriptPath = libraryResource('factorial.py1')
-            sh 'echo "${pythonScriptPath}"'
-            sh 'python "${pythonScriptPath}"'
+            def fileContent = libraryResource('factorial.py')
+            writeFile file: 'main.py', text: fileContent
+            sh 'python main.py'
           }
         }
       }
