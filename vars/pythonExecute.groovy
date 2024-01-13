@@ -11,7 +11,7 @@ def call(Map param){
     stages{
       stage("Init"){
         steps{
-          sh "echo 'Hello World'"
+          sh "python factorial.py"
         }
       }
     }
