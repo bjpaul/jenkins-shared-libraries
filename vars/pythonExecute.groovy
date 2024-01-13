@@ -11,7 +11,7 @@ def call(Map param){
     stages{
       stage("Init"){
         steps{
-          sh "python factorial.py"
+          sh 'python "$WORKSPACE/jenkins-ci/resources/factorial.py"'
         }
       }
     }
