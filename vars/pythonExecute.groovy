@@ -11,8 +11,10 @@ def call(Map param){
     stages{
       stage("Init"){
         steps{
-          def pythonScriptPath = libraryResource 'factorial.py'
-          sh "python ${pythonScriptPath}"
+          script{
+            def pythonScriptPath = libraryResource 'factorial.py'
+            sh "python ${pythonScriptPath}"
+          }
         }
       }
     }
