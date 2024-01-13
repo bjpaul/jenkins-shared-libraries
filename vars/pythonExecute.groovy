@@ -17,6 +17,8 @@ def call(Map param){
           script{
             def fileContent = libraryResource('factorial.py')
             writeFile file: 'main.py', text: fileContent
+            sh 'cat main.py'
+            echo 'python main.py "${params.number}"'
             sh 'python main.py "${params.number}"'
           }
         }
