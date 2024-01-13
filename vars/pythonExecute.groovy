@@ -12,7 +12,7 @@ def call(Map param){
       stage("Init"){
         steps{
           script{
-            def pythonScriptPath = libraryResource 'factorial.py'
+            def pythonScriptPath = libraryResource('jenkins-ci/resources/factorial.py')
             sh 'echo "${pythonScriptPath}"'
             sh 'python "${pythonScriptPath}"'
           }
