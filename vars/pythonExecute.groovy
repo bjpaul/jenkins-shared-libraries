@@ -9,7 +9,7 @@ def call(Map param){
       }
     }
     stages{
-      stage{
+      stage("Init"){
         steps{
           sh "echo 'Hello World'"
         }
