@@ -11,7 +11,7 @@ def call(Map param){
     stages{
       stage("Init"){
         steps{
-          sh 'ls -al /var/jenkins_home/workspace/shared-library-basic/jenkins-ci/'
+          sh 'ls -al "$WORKSPACE"'
           sh 'python "$WORKSPACE/jenkins-ci/resources/factorial.py"'
         }
       }
