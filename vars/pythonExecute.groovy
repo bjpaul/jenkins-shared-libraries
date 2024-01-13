@@ -5,7 +5,7 @@ def call(Map param){
     }
     agent{
       docker{
-        image 'Python:3.6'
+        image 'python:3.6'
       }
     }
     stages{
