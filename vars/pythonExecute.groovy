@@ -13,7 +13,8 @@ def call(Map param){
         steps{
           script{
             def pythonScriptPath = libraryResource 'factorial.py'
-            sh "python ${pythonScriptPath}"
+            sh 'echo "${pythonScriptPath}"'
+            sh 'python "${pythonScriptPath}"'
           }
         }
       }
